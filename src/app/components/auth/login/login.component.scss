@@ -1,0 +1,32 @@
+.body-login {
+    --dark: #16191c;
+    --dar-x: #1e2126;
+    --light: #ffffff;
+}
+
+section {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 300;
+    color: var(--light)
+}
+
+.bg-dark-x{
+    background-color: var(--dar-x);
+}
+
+.form-control, .btn{
+    min-height: 3.125rem;
+    line-height: initial;
+}
+
+.img-1{
+    background-image: url("../../../../assets/images/lapto3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2{
+    background-image: url("../../../../assets/images/lapto2.jpg");
+    background-size: cover;
+    background-position: center;
+}
