@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  isLogged = false;
+  isLoginFail = false;
+  roles: string[] = [];
+  username: string;
+
+  constructor(
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.isLoginFail = false;
+      this.username = this.tokenService.getUsername();
+      this.roles = this.tokenService.getAuthorities();
+    }
   }
 
 }
