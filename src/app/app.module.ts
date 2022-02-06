@@ -15,6 +15,12 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
+import { CineCreateComponent } from './components/cine/cine-create/cine-create.component';
+import { CineEditComponent } from './components/cine/cine-edit/cine-edit.component';
+import { CineListComponent } from './components/cine/cine-list/cine-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,10 @@ import { ToastrModule } from 'ngx-toastr';
     MainComponent,
     SidebarComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    CineCreateComponent,
+    CineEditComponent,
+    CineListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +41,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule, 
+    NgxPaginationModule,
     ToastrModule.forRoot(),
   ],
   providers: [],
